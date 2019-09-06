@@ -31,6 +31,7 @@
     <Compile Remove="View\User.xaml.cs" />
     <Compile Remove="View\UserView2.xaml.cs" />
     <Compile Remove="ViewModel\UserAddModel.cs" />
+    <Compile Remove="ViewModel\UserViewDetailsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="View\UserView.xaml.cs">

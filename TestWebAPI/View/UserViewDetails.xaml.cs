@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using TestWebAPI.Model;
-using TestWebAPI.ViewModel;
 using TestWebAPI.Data;
 using Xamarin.Forms;
 
