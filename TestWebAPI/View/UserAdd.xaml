@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestWebAPI.View.UserAdd"
+             xmlns:local="clr-namespace:TestWebAPI.ViewModel"
+             Title="API">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="First Name" x:Name="First_Name"/>
+            <Entry Placeholder="Last Name" x:Name="Last_Name"/>
+            <Entry Placeholder="Email" x:Name="Email"/>
+            <Button Text="Save" x:Name="btnSave" Clicked="save" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

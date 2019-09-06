@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestWebAPI.View.UserView"
+             xmlns:local="clr-namespace:TestWebAPI.ViewModel"
+             Title=" API Test "
+            >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.BindingContext>
+                <local:UserViewModel/>
+            </StackLayout.BindingContext>
+            <ListView x:Name="ListView" ItemsSource="{Binding UserList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FirstName}" TextColor="Yellow" Detail="{Binding LastName}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="View\" />
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="View\User.xaml" />
+    <EmbeddedResource Remove="View\Password.xaml" />
+    <EmbeddedResource Remove="View\User.xaml" />
+    <EmbeddedResource Remove="View\UserView2.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="View\Password.xaml.cs" />
+    <Compile Remove="View\User.xaml.cs" />
+    <Compile Remove="View\UserView2.xaml.cs" />
+    <Compile Remove="ViewModel\UserAddModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\UserAdd.xaml.cs">
+      <DependentUpon>UserAdd.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
