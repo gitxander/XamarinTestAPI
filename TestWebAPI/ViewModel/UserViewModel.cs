@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using TestWebAPI.Data;
 using TestWebAPI.Model;
 
+/* I'M NOT REALLY SURE HOW THIS WORKS :-\ */
+
 namespace TestWebAPI.ViewModel
 {
     public class UserViewModel:INotifyPropertyChanged

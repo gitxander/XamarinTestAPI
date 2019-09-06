@@ -15,6 +15,7 @@ namespace TestWebAPI.View
             InitializeComponent();
         }
 
+        /* TRIGGER AFTER ADD/UPDATE/DELETE DATA. REFRESH TABLE ROW */
         protected async override void OnAppearing()
         {
             base.OnAppearing();
@@ -22,6 +23,7 @@ namespace TestWebAPI.View
             ListView.ItemsSource = await userData.GetDataAsync();
         }
 
+        /* TRIGGER WHEN ADD NEW USER BUTTON IS CLICKED */
         async void OnNoteAddedClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new UserAdd
@@ -30,6 +32,7 @@ namespace TestWebAPI.View
             });
         }
 
+        /* TRIGGER WHEN AN ITEM IS SELECTED FROM TABLE ROW */
         async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)

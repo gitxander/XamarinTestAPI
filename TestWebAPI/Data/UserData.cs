@@ -14,8 +14,10 @@ namespace TestWebAPI.Data
         HttpClient client = new HttpClient();
         List<User> usersList = null;
 
+        /* LINK FROM AWS EC2 INSTANCE */
         string url = "http://3.91.188.122/user";
 
+        /* GET USER LIST */
         public async Task<List<User>> GetDataAsync()
         {
             try
@@ -35,6 +37,7 @@ namespace TestWebAPI.Data
             return usersList;
         }
 
+        /* ADD NEW USER */
         public async Task<List<User>> PostDataAsync(User user)
         {
             var json = JsonConvert.SerializeObject(user);
@@ -60,6 +63,7 @@ namespace TestWebAPI.Data
 
         }
 
+        /* EDIT USER INFO */
         public async Task<List<User>> PutDataAsync(User user)
         {
             var json = JsonConvert.SerializeObject(user);
@@ -85,6 +89,7 @@ namespace TestWebAPI.Data
 
         }
 
+        /* DELETE USER */
         public async Task<List<User>> DeleteDataAsync(User user)
         {
             HttpClient client1 = new HttpClient();

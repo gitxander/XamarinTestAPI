@@ -13,6 +13,7 @@ namespace TestWebAPI.View
             InitializeComponent();
         }
 
+        /* TRIGGER TO SAVE UPDATED USER INFO */
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
             User user = (User)BindingContext;
@@ -30,6 +31,7 @@ namespace TestWebAPI.View
             await Navigation.PopAsync(); 
         }
 
+        /* TRIGGER TO DELETE USER */
         async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             User user = (User)BindingContext;
